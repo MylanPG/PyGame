@@ -1,0 +1,4 @@
+Player Not Defined
+Health = 100
+Stamina = 100
+Money = 100
