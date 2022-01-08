@@ -8,6 +8,16 @@ import time
 
 accf = os.path.basename("account.txt")
 
+def clear_screen():
+
+    # It is for MacOS and Linux(here, os.name is 'posix')
+    if os.name == 'posix':
+        _ = os.system('clear')
+    else:
+        # It is for Windows platfrom
+        _ = os.system('cls')
+
+
 while True:
  NewAcct = input("Do you have an account? (Y/N): ")
 
@@ -35,4 +45,4 @@ while True:
         print(UserAcct, " created!")
         print(UserAcct, UserAcct + ":" + Passhash, sep='\n', file=open(accf, "a"))
 
-os.system('clear' or 'cls')
+clear_screen()
